@@ -2,7 +2,7 @@
   <div id="app"  v-bind:style="overall_container">
         <div class="jumbotron" v-bind:style="style_container_header">
             <div class="container">
-                <h1 class="display-3">Data Tools Bootcamp</h1>
+                <h1 class="display-12">Data Tools Bootcamp</h1>
 
 
             </div>
@@ -16,7 +16,7 @@
                     <p> -->
                     <div class="container" v-bind:style="style_container">
         <div class="row">
-            <div class="col-xs-6" v-bind:style="style_graph">
+            <div class="col-xs-12" v-bind:style="style_graph">
   <chart></chart>
             </div>
           </div>
@@ -60,7 +60,8 @@ export default {
         backgroundColor: '#96858F'
       },
       style_graph: {
-        color: 'white'
+        color: 'white',
+        width: '80%'
       }
     }
   },
