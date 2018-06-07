@@ -1,17 +1,28 @@
 <template>
-  <div id="app">
+  <div id="app"  v-bind:style="overall_container">
+        <div class="jumbotron" v-bind:style="style_container_header">
+            <div class="container">
+                <h1 class="display-3">Data Tools Bootcamp</h1>
+
+
+            </div>
+            <div class="container">
+                <!-- <p>Please select a publisher from the dropdown.
     <select name='publishers' v-on:change="postNow" v-model="publisherselected">
                         <option v-for="row in publishers" :value="row" :publishersselected="row" :key="row" v-text="row">
                             
                         </option>
                     </select>
+                    <p> -->
                     <div class="container" v-bind:style="style_container">
         <div class="row">
             <div class="col-xs-6" v-bind:style="style_graph">
   <chart></chart>
-  </div>
-  </div>
-  </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -27,7 +38,6 @@ export default {
       global_sales: [],
       na_sales: [],
       label: [],
-      done: '',
       ratingslabel: [],
       criticalscore: [],
       criticscore: [],
@@ -70,7 +80,6 @@ export default {
     },
     processdata: function (response) {
       var _this = this
-      this.done = ''
       var sales = response.data.sales
       var ratings = response.data.ratings
       var genre = response.data.genre
@@ -138,8 +147,6 @@ export default {
         data: _this.nasales
       }
       ]
-
-      _this.done = 'Done'
     }
   }
 }
