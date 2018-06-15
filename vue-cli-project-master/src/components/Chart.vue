@@ -3,6 +3,7 @@ import { Bar } from 'vue-chartjs'
 
 export default {
   extends: Bar,
+  props: [],
   mounted: function () {
     this.renderChart({
       labels: ['Role-Playing', 'Puzzle', 'Shooter', 'Misc', 'Fighting', 'Simulation', 'Platform', 'Strategy', 'Adventure', 'Action', 'Sports', 'Racing'],
